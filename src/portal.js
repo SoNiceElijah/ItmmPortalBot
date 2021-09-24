@@ -10,12 +10,12 @@ const LEC_TYPES = [
 ];
 
 const EMOJI = {
-    t262 : '&#128215;',
-    t264 : "&#128217;",
-    t263 : "&#128216;",
-    t271 : "&#128214;",
-    t266 : "&#128213;",
-    undef : "&#128211;"
+    t262    : '&#128215;',
+    t264    : "&#128217;",
+    t263    : "&#128216;",
+    t271    : "&#128214;",
+    t266    : "&#128213;",
+    undef   : "&#128211;"
 }
 
 const MONTHS = [
@@ -184,6 +184,7 @@ function filterByName(name) {
 class TTGroup {
 
     constructor(gid, time) {
+
         this.gid = gid;
         this.time = time * 1000;
 
@@ -223,6 +224,7 @@ class TTGroup {
     }
 
     async exams() {
+        
         let from = new Date("01.01.2021");
         let to = new Date("02.02.2021");
 
@@ -299,9 +301,11 @@ class TTGroup {
 
 
 module.exports = {
+    
     TTGroup,
     getGroupIdByName,
     makeViewModel
+
 }
 
 

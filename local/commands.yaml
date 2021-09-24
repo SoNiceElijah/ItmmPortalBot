@@ -1,74 +1,123 @@
 commands:
   group:
-    triggers:
+    trigger:      
       - группа
       - group
-  hi:
-    triggers:
+    auth: false
+    template : 'switch'
+  hi: 
+    trigger:
       - привет
       - hi
       - начать
       - start
+    auth: false
+    template : 'hi'
   commands:
-    triggers:
+    trigger:
       - команды
       - commands
+    auth : false
+    template : 'cmnds'
   information:
-    triggers:
+    trigger:
       - информация
       - information
+    auth : false
+    template : 'info'
   portal:
     triggers:
       - портал
       - portal
+    auth : false
+    template : portal
   bug:
-    triggers:
+    trigger:
       - "#bug"
+    auth: false
+    template: 'bug'
   info:
-    triggers:
+    trigger:
       - "#info"
+    auth: false
+    template: 'inf'
   help:
-    triggers:
+    trigger:
       - "#help"
-  keysup:
-    triggers:
+    auth: false
+    template: 'help'
+  keysup:      
+    trigger:
       - "~+"
+    auth: false
+    template : 'keyup'
   keysdown:
-    triggers:
+    trigger:
       - "~-"
+    auth: false
+    template : 'keydown'
   today:
-    triggers:
+    trigger:
       - сегодня
       - today
+    auth: true
+    template: timetable_base
   tommorow:
-    triggers:
+    trigger:
       - завтра
       - tommorow
-  week:
-    triggers:
+    auth: true
+    template: timetable_base
+  week:    
+    trigger:
       - неделя
       - week
-  week2:
-    triggers:
+    auth: true
+    template: timetable_base
+  week2:    
+    trigger:
       - все
       - all
+    auth: true
+    template: timetable_base
   when:
-    triggers:
+    trigger:
       - когда
       - when
+    auth: true
+    template: when_base
   where:
-    triggers:
+    trigger:  
       - где
-      - where 
-  exams:
-    triggers:
+      - where
+    auth: true
+    template: where_base 
+  exams:    
+    trigger:  
       - экзамены
       - exams
-  date:
-    triggers:
+    auth: true
+    template: exams_base
+  date:      
+    trigger:
       - дата
       - date
+    auth: true
+    template: timetable_base
   remove:
-    triggers:
+    trigger:
       - забудь
       - delete
+    auth: true
+    template: remove
+  swtich:
+    trigger:
+      - switch
+    auth: false
+    template : 'switch'
+  cmnd_not_found:
+    trigger:
+      - ""
+    auth: false
+    template: cmnd_not_found
+

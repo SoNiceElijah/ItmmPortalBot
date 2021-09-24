@@ -52,7 +52,7 @@ async function main() {
         }
 
         ctx.user = u;
-        next();    
+        next();
         
     });
 

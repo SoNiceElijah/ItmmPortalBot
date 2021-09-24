@@ -82,6 +82,7 @@ function createWhenMsg(model) {
 }
 
 function createWhereMsg(model) {
+    
     let output = '';
 
     let types = TXS.marks_small;
@@ -90,10 +91,11 @@ function createWhereMsg(model) {
     if(model.type0) { output += LOCAL.lectures; for(let str of model.type0) output += `\n${types['0']} ${str}`; }
     if(model.type1) { output += `\n\n${LOCAL.practices}`; for(let str of model.type1) output += `\n${types['1']} ${str}`; }
     if(model.type2) { output += `\n\n${LOCAL.labs}`; for(let str of model.type2) output += `\n${types['2']} ${str}`; }
+   
     if(model.typeundef) {  output += `\n\n${LOCAL.other}`; for(let str of model.typeundef) output += `\n${types['-1']} ${str}`; }
 
     return output;
-
+    
 }
 
 function createExamMsg(model) {
