@@ -102,7 +102,7 @@ class BotAbstruct
             }
 
             let i = -1;
-            while(FSTORAGE[++i].targets.filter(c => c.test(command)).length);
+            while(!FSTORAGE[++i].targets.filter(c => c.test(command)).length);
 
             let ctr = FSTORAGE[i];
             if(ctr.auth && !user.targetid) ctr.handler = authrefuse;
